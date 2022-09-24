@@ -1,0 +1,41 @@
+
+version: "3.6"
+
+services:
+  api:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    command: npm start
+    # depends_on:
+    #   - db
+    # environment:
+    #   - MYSQL_HOST=${MYSQL_HOST_PROD}
+    #   - MYSQL_USER=${MYSQL_USER_PROD}
+    #   - MYSQL_PASSWORD=${MYSQL_PASSWORD_PROD}
+    #   - MYSQL_DATABASE=${MYSQL_DATABASE}
+    #   - PORT=${PORT}
+    ports:
+      - ${PORT}:${PORT}
+  # db:
+  #   image: mysql:5.7
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD_PROD}
+  #     - MYSQL_USER=${MYSQL_USER_PROD}
+  #     - MYSQL_PASSWORD=${MYSQL_PASSWORD_PROD}
+  #     - MYSQL_DATABASE=${MYSQL_DATABASE}
+  # phpmyadmin:
+  #   image: phpmyadmin/phpmyadmin:4.7
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     - PMA_HOST=db
+  #     - PMA_PORT=3306
+  #   ports:
+  #     - ${PHP_MYADMIN_PORT}:80
+  #   volumes:
+  #     - /sessions
+# networks:
+#   default:
+#     external: true
+#     name: nginx_production_default
