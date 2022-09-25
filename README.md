@@ -7,7 +7,7 @@
 ```
 PORT=3001
 
-SPOTIFY_AUTHORIZATION_URL=https://accounts.spotify.com/authorize?
+SPOTIFY_AUTHORIZATION_URL=https://accounts.spotify.com
 SPOTIFY_BASEURL=https://api.spotify.com/v1
 SPOTIFY_CLIENTID=
 SPOTIFY_CLIENTSECRET=
