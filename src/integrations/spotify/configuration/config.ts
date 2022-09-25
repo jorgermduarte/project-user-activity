@@ -11,9 +11,9 @@ const spotifyCfg = {
   clientSecret: process.env.SPOTIFY_CLIENTSECRET || 'clientSecret',
   // eslint-disable-next-line no-undef
   redirectUri: process.env.SPOTIFY_REDIRECTURI || 'redirectUri',
-  scopes: 'user-read-private user-read-email',
+  scopes: 'user-read-private user-read-email user-read-currently-playing',
   // eslint-disable-next-line no-undef
-  authorizationUrl: process.env.SPOTIFY_AUTHORIZATION_URL || 'https://accounts.spotify.com/authorize',
+  authorizationUrl: process.env.SPOTIFY_AUTHORIZATION_URL || 'https://accounts.spotify.com',
 };
 
 export {spotifyCfg};

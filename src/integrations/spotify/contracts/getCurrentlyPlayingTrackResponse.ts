@@ -32,7 +32,7 @@ type item = {
     duration_ms: number;
     progress_ms?: number;
     genres?: string[];
-    artists: artist[];
+    artists?: artist[];
     name: string;
     popularity?: number;
     preview_url?: string;
@@ -40,10 +40,10 @@ type item = {
 
 type currentlyPlayingTrackResponse = {
     is_playing: boolean;
-    device: device;
+    device?: device;
     item: item;
-    shuffle_state: boolean;
-    repeat_state: string;
+    shuffle_state?: boolean;
+    repeat_state?: string;
 }
 
 

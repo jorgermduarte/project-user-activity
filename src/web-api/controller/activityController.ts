@@ -3,8 +3,8 @@ import {
   getCurrentUserActivity,
 } from '../../integrations/spotify/getCurrentUserActivity';
 import {
-  getShopifyActivityResponseMapper,
-} from '../api-contracts/activity/getShopifyActivityResponse';
+  getSpotifyActivityResponseMapper,
+} from '../api-contracts/activity/getSpotifyActivityResponse';
 import {Response, StatusType} from '../common/response/response';
 
 export default {
@@ -14,10 +14,11 @@ export default {
       next: express.NextFunction,
   ) => {
     const accessToken = request.headers['x-access-token'] as string;
+
     getCurrentUserActivity(accessToken).then( (data) => {
       new Response(request, response)
           .setStatus(StatusType.Ok)
-          .setResult(getShopifyActivityResponseMapper(data))
+          .setResult(getSpotifyActivityResponseMapper(data))
           .send();
     }).catch( (error) => next(error));
   },
