@@ -4,8 +4,8 @@ import {serverOptions} from './configurations/config';
 // eslint-disable-next-line no-unused-vars
 import {
   handleExpressErrorMiddleware,
-} from './middleware/main/error-handler-middleware';
-import {notFoundMiddleware} from './middleware/main/not-found-middleware';
+} from './middleware/main/errorHandlerMiddleware';
+import {notFoundMiddleware} from './middleware/main/notFoundMiddleware';
 
 const server = express();
 const port = serverOptions.port;
@@ -17,7 +17,7 @@ server.use(
 initializers.startMainMiddlewares(server);
 
 server.use('/', [
-  initializers.routers.home,
+  initializers.routers.activity,
 ]);
 server.use(handleExpressErrorMiddleware);
 server.use(notFoundMiddleware);

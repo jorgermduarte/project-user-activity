@@ -1,4 +1,4 @@
-import {StatusType} from '../response/response';
+import {StatusType} from '../../web-api/common/response/response';
 
 // eslint-disable-next-line require-jsdoc
 class WebException extends Error {

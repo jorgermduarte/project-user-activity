@@ -1,5 +1,5 @@
 import express = require('express');
-import {WebException} from '../../common/exceptions/web-exception';
+import {WebException} from '../../../shared/exceptions/webException';
 import {Response, StatusType} from '../../common/response/response';
 
 // eslint-disable-next-line max-len

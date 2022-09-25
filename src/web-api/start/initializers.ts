@@ -1,11 +1,10 @@
-import {startMainMiddlewares} from './main-middlewares.initializer';
-import homeRouter from '../route/home.router';
-
+import {startMainMiddlewares} from './mainMiddlewaresInitializer';
+import activityRouter from '../route/activityRouter';
 
 const initializers = {
   startMainMiddlewares: startMainMiddlewares,
   routers: {
-    home: homeRouter,
+    activity: activityRouter,
   },
 };
 

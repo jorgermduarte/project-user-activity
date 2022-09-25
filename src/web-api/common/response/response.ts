@@ -1,16 +1,7 @@
 import {Request as ExpressRequest, Response as ExpressResponse} from 'express';
+import {StatusType} from '../../../shared/types/statusType';
 
 /* eslint-disable no-unused-vars */
-enum StatusType{
-    Ok = 200,
-    Created = 201,
-    BadRequest = 400,
-    Unauthorized = 401,
-    NotFound = 404,
-    InternalServerError = 500,
-    ServiceUnavailable = 503,
-    NotImplemented = 501
-}
 
 type ErrorData = {
     messages: string[];
