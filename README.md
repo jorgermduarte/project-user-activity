@@ -1,8 +1,18 @@
 # user activity project
 
-- a simple api that grabs a user data from various sources
+A project with the idea to grab information about a user from multiple sources
 
-# .env file example
+## Finished integrations
+
+- spotify
+
+## Available endpoints
+
+- /authorization/spotify
+- /authorization/spotify/callback
+- /me/activity/spotify
+
+## Environment file
 
 ```
 PORT=3001
