@@ -38,7 +38,6 @@ const getAccessToken = (code: string) => {
       );
     }
   }).catch((error) => {
-    console.log(error);
     throw new WebException(error, StatusType.InternalServerError);
   });
 };
