@@ -2,15 +2,18 @@
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-const shopifyCfg = {
+const spotifyCfg = {
   // eslint-disable-next-line no-undef
-  baseUrl: process.env.SHOPIFY_BASEURL || 'https://api.spotify.com/v1',
+  baseUrl: process.env.SPOTIFY_BASEURL || 'https://api.spotify.com/v1',
   // eslint-disable-next-line no-undef
-  clientId: process.env.SHOPIFY_CLIENTID || 'clientId',
+  clientId: process.env.SPOTIFY_CLIENTID || 'clientId',
   // eslint-disable-next-line no-undef
-  clientSecret: process.env.SHOPIFY_CLIENTSECRET || 'clientSecret',
+  clientSecret: process.env.SPOTIFY_CLIENTSECRET || 'clientSecret',
   // eslint-disable-next-line no-undef
-  redirectUri: process.env.SHOPIFY_REDIRECTURI || 'redirectUri',
+  redirectUri: process.env.SPOTIFY_REDIRECTURI || 'redirectUri',
+  scopes: 'user-read-private user-read-email',
+  // eslint-disable-next-line no-undef
+  authorizationUrl: process.env.SPOTIFY_AUTHORIZATION_URL || 'https://accounts.spotify.com/authorize',
 };
 
-export {shopifyCfg};
+export {spotifyCfg};

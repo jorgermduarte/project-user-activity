@@ -1,12 +1,12 @@
 import {Axios} from 'axios';
-import {shopifyCfg} from './config';
+import {spotifyCfg} from './config';
 
-const shopifyApi = new Axios({
-  baseURL: shopifyCfg.baseUrl,
+const spotifyApi = new Axios({
+  baseURL: spotifyCfg.baseUrl,
   timeout: 1500,
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-export {shopifyApi};
+export {spotifyApi};

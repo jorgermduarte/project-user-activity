@@ -18,6 +18,7 @@ initializers.startMainMiddlewares(server);
 
 server.use('/', [
   initializers.routers.activity,
+  initializers.routers.authorization,
 ]);
 server.use(handleExpressErrorMiddleware);
 server.use(notFoundMiddleware);

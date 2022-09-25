@@ -1,12 +1,12 @@
 import {WebException} from '../../shared/exceptions/webException';
 import {StatusType} from '../../shared/types/statusType';
-import {shopifyApi} from './configuration/axiosInstance';
+import {spotifyApi} from './configuration/axiosInstance';
 import {
   currentlyPlayingTrackResponse,
 } from './contracts/getCurrentlyPlayingTrackResponse';
 
 const getCurrentUserActivity = (accessToken: string) => {
-  return shopifyApi.request({
+  return spotifyApi.request({
     method: 'get',
     url: '/me/player/currently-playing',
     headers: {

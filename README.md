@@ -1,47 +1,15 @@
-# Node typescript api template
+# user activity project
 
-A api template project for express with typescript.
+- a simple api that grabs a user data from various sources
 
-# Example .env file
-
-```
-    MYSQL_HOST=localhost
-    MYSQL_USER=root
-    MYSQL_PASSWORD=
-    MYSQL_DATABASE=mysql_database_name
-    PORT=8080
-
-    MYSQL_HOST_PROD=db
-    MYSQL_USER_PROD=produser
-    MYSQL_PASSWORD_PROD=123456
-
-    PHP_MYADMIN_PORT=9000
-```
-
-## Commands
+# .env file example
 
 ```
-    "build": "tsc",
-    "eslint:fix": "eslint src/**/*.ts --fix",
-    "eslint:check": "eslint src/**/*.ts",
-    "start": "npm run build && node dist/web-api/server.js",
-    "prepare": "husky install"
+PORT=3001
+
+SPOTIFY_AUTHORIZATION_URL=https://accounts.spotify.com/authorize?
+SPOTIFY_BASEURL=https://api.spotify.com/v1
+SPOTIFY_CLIENTID=
+SPOTIFY_CLIENTSECRET=
+SPOTIFY_REDIRECTURI=http://localhost:3001/authorization/spotify/callback
 ```
-
-## Project features
-
-- husky
-- eslint
-- typescript
-- nodejs
-- docker
-- express-validators
-- express
-- error handling
-- clean architecture
-- docker-compose
-- middlewares
-- not found middleware
-- loggers
-- dependabot
-- github workflows
